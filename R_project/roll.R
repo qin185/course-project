@@ -1,3 +1,4 @@
+# 设置一个掷骰子的函数
 roll <- function(){
   die <- 1:6
   dice <-sample(die,size = 2,replace = TRUE)
@@ -12,7 +13,7 @@ ggplot(rolls, aes(x = rolls)) +
        x = "点数总和",
        y = "频数")
 
-
+# 掷6的概率为3/8的骰子
 roll3 <- function() {
   die <- 1:6
   prob <- c(rep(1/8, 5), 3/8)
