@@ -1,4 +1,4 @@
-#原子型向量练习
+# 原子型向量练习
 die <- c(1, 2, 3, 4, 5, 6)
 die
 is.vector(die)
@@ -26,7 +26,7 @@ m
 m <- matrix(die, nrow = 2, byrow = TRUE)
 m
 
-#生成一副扑克牌
+# 生成一副扑克牌
 deck <- data.frame(
   face = c("king","queen", "jack", "ten", "nine","eight","seven","six",
            "five","four","three","two","ace","king","queen", "jack", "ten",
@@ -47,7 +47,7 @@ value = c(13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 13, 12, 11, 10, 9, 8,
 10, 9, 8, 7, 6, 5, 4, 3, 2,1)
 )
 
-#用更简洁的语法生成扑克牌
+# 用更简洁的语法生成扑克牌
 faces <- c("king", "queen", "jack", "ten", "nine", "eight", "seven", "six", 
            "five", "four", "three", "two", "ace")
 suits <- c("spades", "clubs", "diamonds", "hearts")
@@ -59,7 +59,7 @@ deck <- data.frame(
   value = rep(values, 4)
 )
 
-#选取扑克牌中的第一张牌
+# 选取扑克牌中的第一张牌
 deck[1, ]
 deck[-c(2:nrow(deck)), ]
 deck[1, ]
@@ -70,7 +70,7 @@ deal <- function(deck) {
 }
 deal(deck)
 
-#洗牌
+# 洗牌
 shuffle <- function(deck) {
   shuffled_deck <- deck[sample(nrow(deck)), ]  # 随机打乱行
   return(shuffled_deck)
